@@ -37,7 +37,7 @@ And watch it fly.
 
 If at some point you want it to it to re-evaluate the PLAN.md based on what it's discovered so far, tell it:
 
-``` json
+```
 Read the task skill.
 
 Then verify the plan for the: my-task-name

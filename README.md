@@ -11,7 +11,8 @@ To create a task, describe it and name it:
 ```
 Read the task skill.
 
-I want you to do this very long and complicated thing. Just setup the task, don't begin work on it.
+I want you to do this very long and complicated thing.
+Just setup the task, don't begin work on it.
 
 Call this task: my-task-name
 ```

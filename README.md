@@ -4,6 +4,14 @@ Complicated long-running multi-step tasks are difficult for agents to handle, es
 
 The tasks skill makes it easy for agents to successfully complete very large long-running tasks while avoiding most context-limit problems by breaking up the task across several steps.
 
+## Installation
+
+```
+$ npx skills add taoeffect/tasks
+```
+
+Or manually create a `tasks` folder in your agent's `skills` folder, and place the `SKILL.md` in that folder. [Learn more about agent skills](https://agentskills.io/specification).
+
 ## Usage
 
 To create a task, describe it and name it:

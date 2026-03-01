@@ -58,9 +58,10 @@ Your progress should be tracked in the particular `STEP-<N>.md` file you're work
 If as you're working on a subtask you discover that it makes sense to adjust and update the `PLAN.md` or `TODOs.md` files, then please do so immediately before proceeding on modifying any source.
 
 - Important: never mark a TODO in TODOs.md as completed unless you've first created a corresponding `STEP-<N>.md` file for it, done the step, updated its notes section, and marked its status as `COMPLETED`.
-- Important: as you are working, always update the current `STEP-<N>.md` file to mark subtasks as completed *before* you move on to the next subtask! This way thinks can smoothly pick up from where you left off if the session is abrupted. You must do this in addition to any 'todos' type tools that you are using to keep track of progress.
+- Important: as you are working, always update the current `STEP-<N>.md` file to mark subtasks as completed *before* you move on to the next subtask! This way things can smoothly pick up from where you left off if the session is abrupted. You must do this in addition to any 'todos' type tools that you are using to keep track of progress.
+- Important: if your agent environment has a `todos` tool (a UI checklist), it must mirror the one-step-at-a-time discipline — **only** populate it with the current step's sub-tasks (from the current `STEP-<N>.md`). Do NOT pre-populate it with all remaining top-level TODOs from `TODOs.md`. The `todos` tool tracks *sub-tasks within the current step*, not the overall plan. Update it as you complete each sub-task, and clear/reset it when you move to the next step.
 
-After you've completed a step and marked its TODO in the `TODOs.md` as done, stop and let the user review your changes (unless otherwise instructed to continue without stopping). 
+After you've completed a step and marked its TODO in the `TODOs.md` as done, stop and let the user review your changes (unless otherwise instructed to continue without stopping).
 
 ## Review Only Instruction
 

@@ -17,7 +17,7 @@ Or manually create a `tasks` folder in your agent's `skills` folder, and place t
 To create a task, describe it and name it:
 
 ```
-Read the task skill.
+Read the tasks skill.
 
 I want you to do this very long and complicated thing.
 Just setup the task, don't begin work on it.

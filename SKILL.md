@@ -76,6 +76,6 @@ There are two useful tools an agent environment might have:
 
 If the agent software has (A) but not (B), then come to a stop when you have little context remaining and give a brief report to the user.
 
-If the agent software has both (A) and (B), invoke a fresh session with a summary of what to do next. Make sure to **always** tell yourself to load the 'tasks' skill in the new session context, and then per the instructions here, provide it the name of the task to begin.
+If the agent software has both (A) and (B) and it's time to start a fresh session because of limited remaining context, use (B) to start a fresh session in a way that let's you pick up from where you left off. Make sure to **always** tell yourself to load the 'tasks' skill in the new session context, and then per the instructions here, provide it the user-given `<task name>` you've been working on.
 
 If it has neither (A) nor (B), don't worry about it, hopefully it will auto-compact properly.

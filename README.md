@@ -17,7 +17,7 @@ Or manually create a `tasks` folder in your agent's `skills` folder, and place t
 To create a task, describe it and name it:
 
 ```
-Read the tasks skill.
+Read the 'tasks' skill.
 
 I want you to do this very long and complicated thing.
 Just setup the task, don't begin work on it.
@@ -36,7 +36,7 @@ This will create a folder in the current project: `.agents/tasks/my-task-name` w
 Then create a new session and say:
 
 ```
-Read the task skill.
+Read the 'tasks' skill.
 
 Begin task: my-task-name
 ```
@@ -46,7 +46,7 @@ And watch it fly.
 If at some point you want it to it to re-evaluate the PLAN.md based on what it's discovered so far, tell it:
 
 ```
-Read the task skill.
+Read the 'tasks' skill.
 
 Then verify the plan for the: my-task-name
 ```

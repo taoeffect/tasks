@@ -19,8 +19,10 @@ To create a task, describe it and name it:
 ```
 Read the 'tasks' skill.
 
+vvvvvv DELETE THIS AND EDIT THE PARAGRAPH BELOW vvvvvv
 I want you to do this very long and complicated thing.
 Just setup the task, don't begin work on it.
+^^^^^^ DELETE THIS AND EDIT THE PARAGRAPH ABOVE ^^^^^^
 
 Call this task: my-task-name
 ```

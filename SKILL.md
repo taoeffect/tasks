@@ -55,11 +55,12 @@ To avoid using up unnecessary context, do not read previous step files (unless y
 
 Your progress should be tracked in the particular `STEP-<N>.md` file you're working on. However, if it's pertinent to completing the current step you're working on, you may update any of the other files in the tasks folder.
 
-If as you're working on a subtask you discover that it makes sense to adjust and update the `PLAN.md` or `TODOs.md` files, then please do so immediately before proceeding on modifying any source.
+If as you're working on a subtask you discover that it makes sense to adjust and update the `PLAN.md` or `TODOs.md` files, then do so immediately before proceeding with any implementation work.
 
 - Important: never mark a TODO in TODOs.md as completed unless you've first created a corresponding `STEP-<N>.md` file for it, done the step, updated its notes section, and marked its status as `COMPLETED`.
 - Important: as you are working, always update the current `STEP-<N>.md` file to mark subtasks as completed immediately after you complete them. No exceptions! Do not start the next substask until you've done this! This is to ensure interrupted sessions can smoothly pick up from where you left off. You must do this in addition to any 'todos' type tools that you are using to keep track of progress.
-- Important: if your agent environment has a `todos` tool (a UI checklist), it must mirror the one-step-at-a-time discipline — **only** populate it with the current step's sub-tasks (from the current `STEP-<N>.md`). Do NOT pre-populate it with all remaining top-level TODOs from `TODOs.md`. The `todos` tool tracks *sub-tasks within the current step*, not the overall plan. Update it as you complete each sub-task, and clear/reset it when you move to the next step.
+- Important: if your agent environment has a `todos` type tool (a UI checklist), NEVER USE IT when using this skill!
+- Important: When create files for a task, NEVER create multiple `STEP-<N>.md` files in a row! ALWAYS ONLY create the STEP file for the current TODO that you're working on, and only after you've reviewed any relevant files and are ready to begin work.
 
 After you've completed a step and marked its TODO in the `TODOs.md` as done, stop and let the user review your changes (unless otherwise instructed to continue without stopping).
 

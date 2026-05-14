@@ -55,3 +55,18 @@ Then verify the plan for the: my-task-name
 
 This will cause it to do an in-depth review of the original plan based on the new knowledge it's gained while working on the task, and update any relevant files like PLAN.md, TODOs.md, etc.
 
+## Tips For Very Large Projects
+
+It is useful to maintain a directory structure that looks like this:
+
+```
+.agents/
+  tasks/                  # task files created by this skill go here
+    my-task/              # example task
+  notes/                  # research notes should be saved here
+  issues/                 # a "poor-man's quick & dirty issue tracker" of markdown files corresponding to bugs/features
+  review/                 # subfolders named after equivalent tasks
+    my-task/REVIEW-1.md   # first review of completed work for the 'my-task' task
+```
+
+For extremely complicated large tasks (like complicated refactors) I recommend having the agent make a high-level plan and store it in `.agents/notes/NAME_OF_PLAN.md`. Then either use that directly as the PLAN.md for the task (via the tasks skill), or tell the agent to use that high level plan as part of the creation of the task files for a new task.

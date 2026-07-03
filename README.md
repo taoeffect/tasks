@@ -45,6 +45,12 @@ Begin task: my-task-name
 
 And watch it fly.
 
+You can pause the session at any time. And you can start an entirely new one and ask it to pick up from where it left off:
+
+```
+Read the 'tasks' skill and continue the task: my-task-name
+```
+
 If at some point you want it to it to re-evaluate the PLAN.md based on what it's discovered so far, tell it:
 
 ```
@@ -54,6 +60,14 @@ Then verify the plan for the: my-task-name
 ```
 
 This will cause it to do an in-depth review of the original plan based on the new knowledge it's gained while working on the task, and update any relevant files like PLAN.md, TODOs.md, etc.
+
+## Optimization Tips
+
+Many coding agents will have a built-in "todos" type tool that they use to keep track of long tasks.
+
+We strongly recommend configuring the agent harness to disable such tools if you're going to use the tasks skill, as they could trip up the agent which would then be responsible for not just updating the task files, but also the harness' todos.
+
+The tasks skill is superior to any agent harness `todos` tool because it's persistent and works across all coding agents.
 
 ## Tips For Very Large Projects
 

@@ -58,9 +58,9 @@ Your progress should be tracked in the particular `STEP-<N>.md` file you're work
 If as you're working on a subtask you discover that it makes sense to adjust and update the `PLAN.md` or `TODOs.md` files, then do so immediately before proceeding with any implementation work.
 
 - Important: never mark a TODO in TODOs.md as completed unless you've first created a corresponding `STEP-<N>.md` file for it, done the step, updated its notes section, and marked its status as `COMPLETED`.
-- Important: as you are working, always update the current `STEP-<N>.md` file to mark subtasks as completed immediately after you complete them. No exceptions! Do not start the next substask until you've done this! This is to ensure interrupted sessions can smoothly pick up from where you left off. You must do this in addition to any 'todos' type tools that you are using to keep track of progress.
+- Important: as you are working, always update the current `STEP-<N>.md` file to mark subtasks as completed immediately after you complete them. No exceptions! Do not start the next substask until you've done this! This is to ensure interrupted sessions can smoothly pick up from where you left off.
 - Important: if your agent environment has a `todos` type tool (a UI checklist), NEVER USE IT when using this skill!
-- Important: When create files for a task, NEVER create multiple `STEP-<N>.md` files in a row! ALWAYS ONLY create the STEP file for the current TODO that you're working on, and only after you've reviewed any relevant files and are ready to begin work.
+- Important: When creating files for a task, NEVER create multiple `STEP-<N>.md` files in a row! ALWAYS ONLY create the STEP file for the current TODO that you're working on, and only after you've reviewed any relevant files and are ready to begin work.
 
 After you've completed a step and marked its TODO in the `TODOs.md` as done, stop and let the user review your changes (unless otherwise instructed to continue without stopping).
 

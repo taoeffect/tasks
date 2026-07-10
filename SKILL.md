@@ -44,12 +44,12 @@ Inside of this `<task name>` folder are the following possible files:
     - ...
     ```
 
-- `KNOWLEDGE.md` - if this file exists, always read it before beginning on any TODOs. It contains project gotchas and dos & donts. Create/update this file as necessary with any useful feedback the user provides, and any discoveries you've made about the codebase as you're working (this is to save you from having to perform the same troubleshooting steps next time). Keep it concise and not too long.
+- `KNOWLEDGE.md` - if this file exists, always read it before beginning on any TODOs. It contains project gotchas and dos & donts. Create/update this file as necessary with any useful feedback the user provides, and any discoveries you've made about the codebase as you're working (this is to save you from having to perform the same troubleshooting steps next time). Keep it concise and not too long. **Important:** this is the only task file guaranteed to be read at the start of every session, so any discovery that a *future* TODO will need — a gotcha, constraint, or surprising behavior relevant to a later step — must be recorded here, not only in the current step's NOTES. Prefix such entries with the TODO they matter for (e.g. `For the TODO-3 test: ...`).
 
 
 ## NOTES
 
-Work in segments of one TODO at a time unless instructed otherwise. When you've completed a TODO, give the user a very brief report on what you've done. Leave any further details in the `NOTES` section of the corresponding `STEP-<N>.md` file.
+Work in segments of one TODO at a time unless instructed otherwise. When you've completed a TODO, give the user a very brief report on what you've done. Leave any further details in the `NOTES` section of the corresponding `STEP-<N>.md` file. If any of those details are discoveries a future TODO depends on, record them in `KNOWLEDGE.md` as well (see above), since old step files might not be read again.
 
 To avoid using up unnecessary context, do not read previous step files (unless you need to in order to complete the current step you're working on).
 

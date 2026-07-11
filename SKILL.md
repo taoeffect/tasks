@@ -44,7 +44,7 @@ Inside of this `<task name>` folder are the following possible files:
     - ...
     ```
 
-- `KNOWLEDGE.md` - if this file exists, always read it before beginning on any TODOs. It contains project gotchas and dos & donts. Create/update this file as necessary with any useful feedback the user provides, and any discoveries you've made about the codebase as you're working (this is to save you from having to perform the same troubleshooting steps next time). Keep it concise and not too long. **Important:** this is the only task file guaranteed to be read at the start of every session, so any discovery that a *future* TODO will need — a gotcha, constraint, or surprising behavior relevant to a later step — must be recorded here, not only in the current step's NOTES. Prefix such entries with the TODO they matter for (e.g. `For the TODO-3 test: ...`).
+- `KNOWLEDGE.md` - if this file exists, always read it before beginning on any TODOs. It contains project gotchas and dos & donts. Create/update this file as necessary with any useful feedback the user provides, and any discoveries you've made about the codebase as you're working (this is to save you from having to perform the same troubleshooting steps next time). Keep it concise and not too long. **Important:** this file is guaranteed to be read at the start of every session, so any discovery that a *future* TODO will need — a gotcha, constraint, or surprising behavior relevant to a later step — must be recorded here, not only in the current step's NOTES. Prefix such entries with the TODO they matter for (e.g. `For the TODO-3 test: ...`).
 
 
 ## NOTES

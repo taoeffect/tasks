@@ -64,6 +64,15 @@ If as you're working on a subtask you discover that it makes sense to adjust and
 
 After you've completed a step and marked its TODO in the `TODOs.md` as done, stop and let the user review your changes (unless otherwise instructed to continue without stopping).
 
+## Pausing for user intervention
+
+If you hit a blocker that only the user can resolve — for example a command that needs privileges you lack (sudo / dnf / apt installs), a missing credential, or a resource you cannot obtain yourself — do NOT hack around it, do NOT keep retrying, and do NOT silently skip the affected work. Instead:
+
+1. Add a section to the current `STEP-<N>.md` headed exactly `## PAUSED: user intervention required`, stating what is blocked, exactly what you need the user to do (including the precise commands to run), and any alternatives or workarounds you can suggest.
+2. Stop immediately: do not mark the sub-task or TODO as done, and report the blocker and your suggestions as your final output.
+
+When you get a response — whether the user answers right away or in a later session (check the current step's file for an unresolved `## PAUSED:` section when continuing a task) — act on it yourself, record the response and how the blocker was resolved under that section, change its heading to `## RESOLVED: user intervention`, and continue the step from where it left off. If the response leaves you still blocked, pause again the same way, stating what is still missing.
+
 ## Review Only Instruction
 
 If the user tells you either "review only", "verify only" or "verify plan" for the task (or something to that effect), this indicates that they don't want you to actually complete any TODOs. Instead, for this session just review the existing CURRENT_DESIGN.md, PLAN.md, TODOs.md (and any relevant STEP file), compare it to the codebase, and verify whether the current plan is sound or if any adjustments should be made. If adjustments should be made, update the documents accordingly and then stop after giving the user a brief summary of the changes.

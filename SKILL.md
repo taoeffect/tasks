@@ -15,14 +15,14 @@ Inside of this `<task name>` folder are the following possible files:
 
 - `CURRENT_DESIGN.md` - detailed description of all relevant parts of the codebase for the task we're working on. It contains all files and important functions and/or selectors for the task description given to us. If this file doesn't exist, then your first task is to create it. If this file already does exist, you do not need to read it unless it is relevant to the current TODO that you're working on. Always make sure you've read it when working on the very first TODO.
 - `PLAN.md` - detailed plan of the changes to be made. This file contains a detailed high-level plan of the changes that need to be made to the codebase in order to accomplish the task. It is based on the understanding of the codebase as established by the project `AGENTS.md` file (if it exists) and the `CURRENT_DESIGN.md` file. If this file doesn't exist, you are to create it based on the task description that the user gave you, and then afterward create `TODOs.md` based on this plan (see next bullet point). If this file already does exist, read it if you haven't already done so.
-- `TODOs.md` - a non-hierarchical numbered outline of sequential steps to be taken. Each of the todos in this file correspond to a `STEP-<N>.md` file, and those files are where any sub-steps go. Always read this file before starting any task so that you know what specific step to work on next. Example:
+- `TODOs.md` - a non-hierarchical numbered outline of sequential steps to be taken. Each of the todos in this file correspond to a `STEP-<N>.md` file, and those files are where any sub-steps go. Always read this file before starting any task so that you know what specific step to work on next. Todos should be short high-level descriptions of the task to be completed (details go in STEP files). Example:
 
     ```md
     1. [x] Analyze all existing code related to creating users
     2. [ ] Refactor the codebase so that all users join the `#general` channel when they're created
     ```
 
-- `STEP-<N>.md` - these file correspond to the numbered step from `TODOs.md`. They contain the current step status, a series of numbered sub-steps, and a final section of notes related to where we are in completing this step. You can use this file as a memory bank for important information for picking up where you left off in case the session ends, the context clears, and you need to pick up from where you left off in a new context. Here's an example of what this file could look like:
+- `STEP-<N>.md` - these files correspond to the numbered step from `TODOs.md`. They contain the current step status, a series of numbered sub-steps, and a final section of notes related to where we are in completing this step. You can use this file as a memory bank for important information for picking up where you left off in case the session ends, the context clears, and you need to pick up from where you left off in a new context. Here's an example of what this file could look like:
 
     ```md .agents/tasks/update-pull-request-workflow/STEP-1.md
     # Analyze all existing code related to creating users
@@ -55,14 +55,29 @@ To avoid using up unnecessary context, do not read previous step files (unless y
 
 Your progress should be tracked in the particular `STEP-<N>.md` file you're working on. However, if it's pertinent to completing the current step you're working on, you may update any of the other files in the tasks folder.
 
-If as you're working on a subtask you discover that it makes sense to adjust and update the `PLAN.md` or `TODOs.md` files, then do so immediately before proceeding with any implementation work.
+If, while working on a subtask, you discover that `PLAN.md` or `TODOs.md` must be adjusted, update them immediately before proceeding with implementation. When adding a TODO to an existing task, follow the rules in "Adding TODOs to an existing task" section instead.
 
 - Important: never mark a TODO in TODOs.md as completed unless you've first created a corresponding `STEP-<N>.md` file for it, done the step, updated its notes section, and marked its status as `COMPLETED`.
-- Important: as you are working, always update the current `STEP-<N>.md` file to mark subtasks as completed immediately after you complete them. No exceptions! Do not start the next substask until you've done this! This is to ensure interrupted sessions can smoothly pick up from where you left off.
+- Important: as you are working, always update the current `STEP-<N>.md` file to mark subtasks within it as completed immediately after you complete them. No exceptions! Do not start the next subtask until you've done this! This is to ensure interrupted sessions can smoothly pick up from where you left off.
 - Important: if your agent environment has a `todos` type tool (a UI checklist), NEVER USE IT when using this skill!
-- Important: When creating files for a task, NEVER create multiple `STEP-<N>.md` files in a row! ALWAYS ONLY create the STEP file for the current TODO that you're working on, and only after you've reviewed any relevant files and are ready to begin work.
+- Important: When creating files for a task, NEVER create multiple `STEP-<N>.md` files in a row! Except when adding a TODO to an existing task, ALWAYS ONLY create the STEP file for the current TODO that you're working on, and only after you've reviewed any relevant files and are ready to begin work.
 
 After you've completed a step and marked its TODO in the `TODOs.md` as done, stop and let the user review your changes (unless otherwise instructed to continue without stopping).
+
+## Adding TODOs to an existing task
+
+Use this procedure when the user asks you to add a TODO to an existing task whose `CURRENT_DESIGN.md`, `PLAN.md`, and `TODOs.md` files already exist. Existing STEP files are not required for TODOs that have not yet been started.
+
+This procedure is for follow-up work that can be completed after the existing TODOs.
+
+- Read `TODOs.md`, `PLAN.md`, `KNOWLEDGE.md`, and any other task files relevant to the requested addition.
+- Add a short, high-level TODO to the end of `TODOs.md`.
+- DO NOT modify `PLAN.md` unless the new TODO contradicts the existing plan. If it does, add a **brief** addendum explaining the change in direction to the end of `PLAN.md` referencing this TODO number. This rule overrides the general PLAN update rule above.
+- Create the corresponding `STEP-<N>.md` file and put all implementation details there. Set its status to `NOT STARTED`.
+  - Creating this STEP file is an explicit exception to the rule against creating STEP files before their TODO becomes current.
+- The earliest incomplete TODO remains the current TODO.
+
+Then stop without implementing the new TODO unless instructed otherwise.
 
 ## Pausing for user intervention
 
@@ -86,6 +101,6 @@ There are two useful tools an agent environment might have:
 
 If the agent software has (A) but not (B), then come to a stop when you have little context remaining and give a brief report to the user.
 
-If the agent software has both (A) and (B) and it's time to start a fresh session because of limited remaining context, use (B) to start a fresh session in a way that let's you pick up from where you left off. Make sure to **always** tell yourself to load the 'tasks' skill in the new session context, and then per the instructions here, provide it the user-given `<task name>` you've been working on.
+If the agent software has both (A) and (B) and it's time to start a fresh session because of limited remaining context, use (B) to start a fresh session in a way that lets you pick up from where you left off. Make sure to **always** tell yourself to load the 'tasks' skill in the new session context, and then per the instructions here, provide it the user-given `<task name>` you've been working on.
 
 If it has neither (A) nor (B), don't worry about it, hopefully it will auto-compact properly.
